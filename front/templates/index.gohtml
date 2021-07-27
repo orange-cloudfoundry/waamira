@@ -1,0 +1,11 @@
+{{define "content"}}
+  <h1 class="text-white font-bold text-4xl">Create your issue from template</h1>
+  <hr class="bg-white border-white"/>
+  <div class="overflow-hidden w-full flex justify-center items-center flex-wrap">
+      {{ range $key, $fields := .TemplateFiles }}
+        <a href="/template/{{ $key }}" class='relative border border-black hover:border-white hover:text-white rounded text-black p-6 text-2xl font-bold overflow-hidden m-5'>
+            {{ $key | title }}
+        </a>
+      {{ end }}
+  </div>
+{{ end }}
